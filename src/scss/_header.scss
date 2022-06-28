@@ -1,0 +1,52 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.logo {
+    font-family: "Martel";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: $primary;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+    &__item {
+        margin-right: 25px;
+        &:nth-child(5n) {
+            text-align: right;
+        }
+        & a {
+            text-decoration: none;
+            vertical-align: middle;
+            line-height: 24px;
+            color: $primary-light;
+            font-weight: 600;
+            transition: color 0.2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                color: $secondary;
+            }
+            & img {
+                width: 16px;
+                height: 16px;
+                &:hover {
+                    fill: $secondary;
+                }
+            }
+        }
+    }
+}

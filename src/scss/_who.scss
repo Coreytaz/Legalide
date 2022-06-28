@@ -1,0 +1,55 @@
+.who {
+    &-title {
+        padding-top: 100px;
+        text-align: center;
+        font-family: "Martel";
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+    }
+    &-subtitle {
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: $primary-light;
+    }
+    & .start {
+        text-align: left;
+    }
+    & .pt {
+        padding-top: 30px;
+    }
+    &-inner {
+        padding-top: 100px;
+        padding-bottom: 140px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 100px;
+    }
+    &__video {
+        cursor: pointer;
+    }
+    &__info-item {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 50px;
+        gap: 21px;
+        &:nth-child(2n) {
+            padding-top: 30px;
+        }
+        &-title {
+            font-family: "Martel";
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &-subtitle {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: $primary-light;
+        }
+    }
+}

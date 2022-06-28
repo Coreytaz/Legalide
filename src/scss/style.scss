@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$primary: #252b42;
+$primary-light: #737373;
+$secondary: #784f33;
+$white: #fff;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: $primary;
+}
+
+.container {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@import "header";
+@import "hero";
+@import "areas";
+@import "advice";
+@import "who";

@@ -1,0 +1,45 @@
+.areas {
+    &-title {
+        padding-top: 100px;
+        text-align: center;
+        font-family: "Martel";
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+    }
+    &-subtitle {
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: $primary-light;
+    }
+    &__items {
+        padding-top: 80px;
+        padding-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    &__item {
+        background: #f9f9f9;
+
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+        border-radius: 5px;
+        display: flex;
+        padding: 30px 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img {
+            width: 40px;
+            height: 50px;
+        }
+
+        &.secondary {
+            background-color: #295c7a;
+            color: #fff;
+        }
+    }
+}

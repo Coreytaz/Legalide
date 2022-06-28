@@ -1,0 +1,68 @@
+.hero {
+    display: flex;
+    margin-top: -60px;
+    height: 100vh;
+    background-image: url("../images/hero__bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: flex-end;
+    &-inner {
+        display: flex;
+    }
+    &__item {
+        & img {
+            height: 100%;
+        }
+    }
+    & .info {
+        margin-top: 120px;
+    }
+    &__title {
+        font-family: "Martel";
+        font-weight: 900;
+        font-size: 58px;
+        line-height: 65px;
+        color: $primary;
+        margin-bottom: 35px;
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $primary-light;
+        margin-bottom: 35px;
+        max-width: 360px;
+    }
+    &__btns {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: start;
+        gap: 10px;
+    }
+    &__btn {
+        border: none;
+        border-radius: 37px;
+        width: 182px;
+        height: 48px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+.btn-primary {
+    background-color: $secondary;
+    color: $white;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.btn-outline {
+    background: none;
+    color: $secondary;
+    border: 1px solid #784f33;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
