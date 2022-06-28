@@ -1,0 +1,73 @@
+.company {
+    padding-top: 58px;
+    background-color: #fafafa;
+    &__logo {
+        padding-bottom: 110px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    &-footer {
+        width: 100%;
+        height: 77px;
+        background-color: #252b42;
+        position: relative;
+    }
+    &-footer__sub {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        padding: 30px 50px;
+        gap: 180px;
+        width: 100%;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%, -20%);
+        max-width: 986px;
+        height: 124px;
+        background: linear-gradient(270deg, #295c7a -1.04%, #0072b5 100%);
+        border-radius: 2px;
+        & h1 {
+            max-width: 253px;
+            font-family: "Martel";
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            color: $white;
+        }
+        & .form {
+            position: relative;
+            & input {
+                padding: 15px 0 15px 20px;
+                width: 300px;
+                height: 58px;
+                background: #f9f9f9;
+                border: 1px solid #e6e6e6;
+                border-radius: 5px 0px 0px 5px;
+                font-family: "Montserrat";
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 28px;
+                color: $primary-light;
+                outline: none;
+            }
+            &__btn {
+                padding: 15px 22px;
+                background-color: #d0a144;
+                border: 1px solid #e6e6e6;
+                border-radius: 0px 5px 5px 0px;
+                position: absolute;
+                width: 117px;
+                height: 58px;
+                color: $white;
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out;
+                &:hover {
+                    background-color: #c5983d;
+                }
+            }
+        }
+    }
+}
