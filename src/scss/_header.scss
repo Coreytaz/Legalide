@@ -22,9 +22,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    align-items: center;
-
-    &__item {
+    &__item-nav {
         margin-right: 25px;
         &:nth-child(5n) {
             text-align: right;

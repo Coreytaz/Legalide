@@ -1,0 +1,78 @@
+.touch {
+    background-color: #f3f3f3;
+    &-title {
+        padding-top: 80px;
+        text-align: center;
+        font-family: "Martel";
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+    }
+    &-subtitle {
+        padding-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: $primary-light;
+    }
+    &__items {
+        padding-top: 80px;
+        padding-bottom: 185px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 328px;
+        height: 333px;
+        background-color: #ffffff;
+        padding: 50px 60px;
+        &.active {
+            background-color: #252b42;
+            color: $white;
+            height: 393px;
+        }
+        & svg {
+            margin-bottom: 15px;
+            width: 72px;
+            height: 72px;
+            fill: #D0A144;
+        }
+        &-mail a {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: $primary;
+            text-decoration: none;
+            color: inherit;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &-subtitle {
+            margin-top: 15px;
+        }
+        &-submit {
+            padding: 10px 20px;
+            font-family: "Open Sans";
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: #d0a144;
+            border: 1px solid #d0a144;
+            border-radius: 5px;
+            background: none;
+            transition: transform 0.2s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
