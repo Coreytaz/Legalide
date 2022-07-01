@@ -41,7 +41,7 @@
             margin-bottom: 15px;
             width: 72px;
             height: 72px;
-            fill: #D0A144;
+            fill: #d0a144;
         }
         &-mail a {
             font-weight: 700;
@@ -72,6 +72,41 @@
             transition: transform 0.2s ease-in-out;
             &:hover {
                 transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .touch {
+        &__items {
+            flex-direction: column;
+            gap: 30px 0;
+            padding-bottom: 137px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 328px;
+            height: 333px;
+            background-color: #ffffff;
+            padding: 50px 60px;
+            &.active {
+                max-width: 328px;
+                height: 333px;
+            }
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .touch {
+        &__item {
+            max-width: 273px;
+            &.active {
+                max-width: 273px;
             }
         }
     }

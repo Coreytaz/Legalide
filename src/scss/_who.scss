@@ -30,6 +30,9 @@
     }
     &__video {
         cursor: pointer;
+        & img {
+            object-fit: cover;
+        }
     }
     &__info-item {
         display: flex;
@@ -50,6 +53,33 @@
             font-size: 14px;
             line-height: 24px;
             color: $primary-light;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .who {
+        &__video {
+            & img {
+                width: 100%;
+            }
+        }
+        & .pt {
+            padding-top: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .who {
+        &-title {
+            &.start {
+                text-align: center;
+            }
+        }
+        &-inner {
+            gap: 72px 0;
+            grid-template-columns: 1fr;
         }
     }
 }

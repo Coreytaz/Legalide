@@ -13,7 +13,9 @@
     }
     &__item {
         & img {
-            height: 100%;
+            display: block;
+            max-width: 565px;
+            max-height: 681px;
         }
     }
     & .info {
@@ -68,5 +70,91 @@
     border: 1px solid #784f33;
     &:hover {
         transform: scale(1.05);
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: auto;
+        padding-top: 84px;
+        &__item {
+            & img {
+                max-width: 450px;
+            }
+        }
+        & .info {
+            margin-top: 100px;
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 60px;
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 30px;
+            margin-bottom: 20px;
+            max-width: 280px;
+        }
+        &__btn {
+            width: 140px;
+            height: 48px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding-top: 84px;
+        &-inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            & img {
+                max-width: 377px;
+                max-height: 445px;
+            }
+        }
+        & .info {
+            margin-top: 80px;
+        }
+        &__title {
+            text-align: center;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 50px;
+            margin-bottom: 35px;
+        }
+        &__subtitle {
+            text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            max-width: initial;
+        }
+        &__btn {
+            width: 140px;
+            height: 48px;
+            &.btn-outline {
+                margin-top: 20px;
+            }
+        }
+        &__btns {
+            grid-template-columns: repeat(1, auto);
+            justify-content: center;
+            margin-bottom: 108px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .hero {
+        &__item {
+            & img {
+                max-width: 280px;
+            }
+        }
     }
 }

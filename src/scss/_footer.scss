@@ -80,3 +80,33 @@
 .align-items {
     align-items: center;
 }
+
+@media (max-width: 1024px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 658px) {
+    .flex {
+        flex-direction: column;
+    }
+    .menu {
+        &__nav-title {
+            margin-top: 30px;
+            text-align: center;
+        }
+    }
+    .footer-menu__nav:first-child > .menu__nav-title {
+        margin-top: 0;
+    }
+    .menu__item {
+        justify-content: center;
+    }
+    .footer-menu__nav:last-child > .menu__items > .menu__item:nth-child(2n) a span {
+        display: none;
+    }
+    .align-items {
+        gap: 52px 0;
+    }
+}

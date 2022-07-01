@@ -36,3 +36,35 @@
         }
     }
 }
+.contact {
+    background-color: #fafafa;
+    &-inner {
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        &-inner {
+            justify-content: space-around;
+        }
+        &__submit {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        &-inner {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px 0;
+        }
+        &__submit {
+            padding: 15px 40px;
+        }
+    }
+}

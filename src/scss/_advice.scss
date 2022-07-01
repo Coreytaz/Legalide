@@ -49,3 +49,22 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .advice {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__item {
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .advice {
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

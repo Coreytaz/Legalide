@@ -2,9 +2,12 @@
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    align-items: center;
 }
 
 .logo {
+    flex: 1 1 auto;
+    flex-grow: 1;
     font-family: "Martel";
     font-style: normal;
     font-weight: 700;
@@ -19,9 +22,33 @@
 }
 
 .menu {
+    &__subitem {
+        &-link {
+            line-height: 0px;
+        }
+    }
+    &__burger {
+        display: none;
+    }
+    &__subitem {
+        z-index: 2;
+        &-link {
+            margin-left: 15px;
+            margin-right: 18px;
+            vertical-align: middle;
+            & img {
+                height: 18px;
+                width: 18px;
+            }
+            &:last-child {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    }
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     &__item-nav {
         margin-right: 25px;
         &:nth-child(5n) {
@@ -38,13 +65,103 @@
             &:hover {
                 color: $secondary;
             }
-            & img {
-                width: 16px;
-                height: 16px;
-                &:hover {
-                    fill: $secondary;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        z-index: 2;
+    }
+    .menu {
+        &__subitem {
+            &-link {
+                & img {
+                    height: 25px;
+                    width: 25px;
+                }
+                &:last-child {
+                    margin-right: 0;
+                    margin-left: 0;
                 }
             }
         }
+        display: block;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-color: #fff;
+        padding-top: 150px;
+        transition: all 0.2s ease-in-out;
+        &.active {
+            top: 0;
+        }
+        & li {
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 45px;
+            text-align: center;
+            margin-right: 0;
+        }
+
+        &__burger {
+            margin-left: 30px;
+            z-index: 2;
+            display: block;
+            position: relative;
+            width: 24px;
+            height: 14px;
+
+            &.active::before {
+                transform:translateY(-50%) rotate(45deg);
+                top: 50%;
+                width: 100%;
+                transition: all 0.2s ease-in-out;
+            }
+            &.active::after {
+                transform:translateY(-50%) rotate(-45deg);
+                top: 50%;
+                width: 100%;
+            }
+            &.active span {
+                display: none;
+            }
+            & span {
+                position: absolute;
+                background-color: $primary-light;
+                right: 0;
+                width: 70%;
+                height: 2px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &::before,
+            &::after {
+                content: "";
+                background-color: $primary-light;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                right: 0;
+                transition: all 0.2s ease-in-out;
+
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 282px) {
+    .menu__burger {
+        margin-left: 20px;
     }
 }

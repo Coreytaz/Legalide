@@ -33,13 +33,29 @@
         justify-content: center;
         align-items: center;
         & img {
-            width: 40px;
-            height: 50px;
+            width: 53px;
+            height: 53px;
+        }
+        & span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
         }
 
         &.secondary {
             background-color: #295c7a;
             color: #fff;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .areas {
+        &-title {
+            padding-top: 145px;
+        }
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 }
