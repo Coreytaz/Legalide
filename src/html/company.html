@@ -1,22 +1,73 @@
-<section class="company">
+<section class="company" aria-label="Our partners and newsletter">
   <div class="container">
-    <div class="company__logo">
-      <div class="logo"><img src="@img/company/hooli.svg" alt="logo" /></div>
-      <div class="logo"><img src="@img/company/lyft.svg" alt="logo" /></div>
-      <div class="logo"><img src="@img/company/piper.svg" alt="logo" /></div>
-      <div class="logo"><img src="@img/company/stripe.svg" alt="logo" /></div>
-      <div class="logo"><img src="@img/company/aws.svg" alt="logo" /></div>
-      <div class="logo"><img src="@img/company/reddit.svg" alt="logo" /></div>
+    <div class="company__logo" aria-label="Partner logos">
+      <img
+        src="@img/company/hooli.svg"
+        width="103"
+        height="35"
+        alt="Hooli"
+        loading="lazy"
+      />
+      <img
+        src="@img/company/lyft.svg"
+        width="84"
+        height="59"
+        alt="Lyft"
+        loading="lazy"
+      />
+      <img
+        src="@img/company/piper.svg"
+        width="102"
+        height="75"
+        alt="Piper"
+        loading="lazy"
+      />
+      <img
+        src="@img/company/stripe.svg"
+        width="103"
+        height="43"
+        alt="Stripe"
+        loading="lazy"
+      />
+      <img
+        src="@img/company/aws.svg"
+        width="105"
+        height="63"
+        alt="AWS"
+        loading="lazy"
+      />
+      <img
+        src="@img/company/reddit.svg"
+        width="77"
+        height="73"
+        alt="Reddit"
+        loading="lazy"
+      />
     </div>
   </div>
   <div class="company-footer">
     <div class="container">
       <div class="company-footer__sub">
-        <h1>Subscribe For Latest Newsletter</h1>
-        <div class="form">
-          <input type="text" placeholder="Your E-mail" />
-          <button class="form__btn">Subscribe</button>
-        </div>
+        <h2>Subscribe For Latest Newsletter</h2>
+        <form class="newsletter-form" id="newsletter-form">
+          <label class="visually-hidden" for="newsletter-email"
+            >Your E-mail</label
+          >
+          <input
+            id="newsletter-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="Your E-mail"
+            required
+          />
+          <button type="submit">Subscribe</button>
+          <p
+            class="newsletter-form__status"
+            id="newsletter-status"
+            aria-live="polite"
+          ></p>
+        </form>
       </div>
     </div>
   </div>
