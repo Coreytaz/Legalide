@@ -18,7 +18,7 @@ test('static build resolves source includes and references', () => {
 test('one h1, named section headings, and keyboard skip link', () => {
   assert.equal(matches(/<h1\b/g).length, 1);
   assert.match(html, /class="skip-link" href="#main-content"/);
-  assert.match(html, /aria-controls="primary-navigation" aria-expanded="false"/);
+  assert.match(html, /aria-controls="primary-navigation"\s+aria-expanded="false"/);
   for (const id of ['home','practice-areas','advice','about','get-in-touch','consultation']) {
     assert.ok(html.includes(`id="${id}"`), `Missing section: ${id}`);
   }
